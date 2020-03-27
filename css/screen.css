@@ -386,6 +386,7 @@ a:focus {
 .c-nav {
     font-size: 18px;
     line-height: 24px;
+    display: block;
 }
 
 
@@ -429,11 +430,61 @@ a:focus {
     color: #5051DB;
 }
 
+/*
+    Component: header
+    ---
+    Main header of the website
+*/
+
+.c-header__nav {
+    display: none;
+}
+
+
+
     
 
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
+
+/*
+    Utilities: spacing
+    ---
+    Utility classes to put smargins and padding onto elements
+*/
+
+.u-pt-clear{
+    padding-top: 0 !important;
+}
+
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+    display: flow-root;
+}
+
+.o-section + .o-section {
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .o-section--lg + .o-section--lg,
+    .o-section--xl + .o-section--xl {
+        margin-top: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o-section--xl + .o-section--xl {
+        margin-top: 72px;
+    }
+}
+
 
 /*
     Utilities: max-width
@@ -696,23 +747,53 @@ a:focus {
 @media (min-width: 768px) {
     .c-nav__list {
         display: flex;
+        margin-left: -16px;
+        margin-right: -16px;
     }
 
     .c-nav__link {
         padding: 8px 16px;
+    }
+
+    .o-row{
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .o-row__mad {
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+
+    .o-row--lg{
+        padding-top: 72px;
+        padding-bottom: 48px;
     }
 }
 
 
 /* /* Large devices (landscape tablets, desktops, 992px and up) */
 @media (min-width: 992px) {
-    font-weight: 400;
+    html{
+        font-weight: 400;
+
+    }
+
+    .c-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .c-header__nav {
+        display: block;
+    }
 }
 
 
 /* /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    font-weight: 400;
+ 
 }
 
 
