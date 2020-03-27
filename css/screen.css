@@ -352,6 +352,22 @@ a:focus {
   #COMPONENTS
 \*------------------------------------*/
 
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+    height: 32px;
+}
+
+.c-logo__symbol {
+    height: 100%;
+}
+
+    
+
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
@@ -515,6 +531,10 @@ a:focus {
   .u-5-of-6-bp2 {
     flex-basis: calc(100% / 6 * 5) !important;
   }
+
+  .c-logo__symbol {
+      height: 40px;
+}
 }
 
 @media (min-width: 992px) {
