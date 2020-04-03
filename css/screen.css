@@ -211,8 +211,11 @@ a:focus {
 }
 
 .o-row—gradient{
-  background: linear-gradient(to top, #5051DB,#3887F7);
+  background: linear-gradient(to top right, #5051DB,#3887F7);
   color: white;
+  position: relative;
+  padding: 24px 24px 0;
+  display: flow-root;
 }
 
 /* size modifiers */
@@ -371,6 +374,91 @@ a:focus {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+
+
+/*
+    Component: footer
+    ---
+    Main footer of the website
+*/
+
+.c-footer {
+  font-size:18px;
+  line-height:24px;
+  position: relative;
+}
+
+.c-footer__logo {
+  /* background:green; */
+
+}
+
+.c-footer__nav {
+  /* background:blue; */
+}
+
+@media (min-width: 768px) {
+  .c-logo{
+      height:40px;
+  }
+  .c-footer {
+  }
+
+  .c-footer__logo {
+      display:flex;
+      justify-content: center;
+
+  }
+
+  .c-footer__nav {
+      display:flex;
+      justify-content: center;
+
+      /* margin:0 auto; */
+      /* align-content:space-round */
+  }
+}
+
+@media (min-width: 992px) {
+  .c-footer {
+  }
+
+  .c-footer__logo {
+      /* position: absolute;
+      width:100%;
+      top:40px;
+      left:-40px;
+     */
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+  }
+
+  .c-footer__logo .c-logo {
+      
+  }
+
+  .c-footer__nav {
+     
+      justify-content: space-between;
+  }
+}
+
+/*
+    Component: title icon
+    ---
+*/
+
+.c-title-icon{
+  display: flex;
+  
+  
+}
+
+.c-title-icon__icon{
+  height: 6em;
+}
 
 /*
     Component: CTA link
